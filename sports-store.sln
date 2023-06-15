@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7E3EB420
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebApp.Tests", "tests\SportsStore.WebApp.Tests\SportsStore.WebApp.Tests.csproj", "{B3E6CCC3-6A75-4CFB-AF58-64D2EEA5CC51}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7DA5D133-77B8-4E18-B074-E0BFA067D4ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{B3E6CCC3-6A75-4CFB-AF58-64D2EEA5CC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3E6CCC3-6A75-4CFB-AF58-64D2EEA5CC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3E6CCC3-6A75-4CFB-AF58-64D2EEA5CC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA5D133-77B8-4E18-B074-E0BFA067D4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA5D133-77B8-4E18-B074-E0BFA067D4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA5D133-77B8-4E18-B074-E0BFA067D4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA5D133-77B8-4E18-B074-E0BFA067D4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0D9CCF84-E43E-4D9B-B751-1370F03FDE60} = {15E2496E-0C49-4FF3-8B97-4BE50E017195}
