@@ -1,0 +1,24 @@
+
+# Prevent this config from inheriting properties
+root = true
+
+# General styles
+[*]
+charset = utf-8
+end_of_line = crlf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Configuration files
+[*.{config,config.template,csproj,json,props,xml,yml}]
+indent_size = 2
+
+# Unix shell files
+[*.{sh}]
+end_of_line = lf
+
+[*.{cs,vb}]
+dotnet_diagnostic.IDE0003.severity = none
+dotnet_diagnostic.IDE0009.severity = error
