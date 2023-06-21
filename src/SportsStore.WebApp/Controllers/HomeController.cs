@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SportsStore.WebApp.Models;
+using SportsStore.WebApp.Models.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,11 +16,20 @@ namespace SportsStore.WebApp.Controllers
             _repository = repository;
         }
         // GET: /<controller>/
-        public IActionResult Index(int productPage = 1)
-            => View(_repository.Products
-                .OrderBy(p => p.ProductId)
-                .Skip((productPage - 1) * PageSize)
-                .Take(PageSize));
+        public ViewResult Index(int productPage = 1)
+            => View(new ProductsListViewModel
+            {
+                Products = _repository.Products
+                    .OrderBy(p => p.ProductId)
+                    .Skip((productPage - 1) * PageSize)
+                    .Take(PageSize),
+                PagingInfo = new PagingInfoViewModel
+                {
+                    CurrentPage = productPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = _repository.Products.Count()
+                }
+            });                
     }
 }
 
