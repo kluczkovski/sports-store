@@ -15,7 +15,7 @@ namespace SportsStore.WebApp.Controllers
         {
             _repository = repository;
         }
-        // GET: /<controller>/
+
         public ViewResult Index(int productPage = 1)
             => View(new ProductsListViewModel
             {
