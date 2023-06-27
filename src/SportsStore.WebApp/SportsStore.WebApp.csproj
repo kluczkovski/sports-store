@@ -35,4 +35,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Shared\ProductSummary.cshtml" />
+    <Content Remove="libman.json" />
+  </ItemGroup>
 </Project>
