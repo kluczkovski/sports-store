@@ -16,10 +16,12 @@ namespace SportsStore.WebApp.Controllers
             _repository = repository;
         }
 
-        public ViewResult Index(int productPage = 1)
+        public ViewResult Index(string? category, int productPage = 1)
             => View(new ProductsListViewModel
             {
+                CurrentyCategory = category,
                 Products = _repository.Products
+                    .Where(c => category == null || c.Category == category)
                     .OrderBy(p => p.ProductId)
                     .Skip((productPage - 1) * PageSize)
                     .Take(PageSize),
@@ -29,7 +31,7 @@ namespace SportsStore.WebApp.Controllers
                     ItemsPerPage = PageSize,
                     TotalItems = _repository.Products.Count()
                 }
-            });                
+            });               
     }
 }
 
