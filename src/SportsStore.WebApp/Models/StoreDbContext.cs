@@ -12,6 +12,8 @@ namespace SportsStore.WebApp.Models
 		public DbSet<Product> Products => Set<Product>();
 
 		public DbSet<Location> Locations => Set<Location>();
+
+		public DbSet<Order> Orders => Set<Order>();
 	}
 }
 
