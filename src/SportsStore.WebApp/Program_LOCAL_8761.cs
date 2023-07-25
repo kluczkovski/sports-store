@@ -33,20 +33,25 @@ app.UseStaticFiles();
 
 app.UseSession();
 
-app.MapControllerRoute("catpage",
+app.MapControllerRoute(
+    "catpage",
     "{category}/Page{productPage:int}",
-    new { Controller = "Home", action = "Index" });
+    new { Controler = "Home", Action = "Index" });
 
-app.MapControllerRoute("page", "Page{productPage:int}",
-    new { Controller = "Home", action = "Index", productPage = 1 });
+app.MapControllerRoute(
+    "page",
+    "Page{productPage:int}",
+    new { Controler = "Home", Action = "Index" });
 
-app.MapControllerRoute("category", "{category}",
-    new { Controller = "Home", action = "Index", productPage = 1 });
+app.MapControllerRoute(
+    "category",
+    "{category}",
+    new { Controller = "Home", Action = "Index" });
 
-app.MapControllerRoute("pagination",
-    "Products/Page{productPage}",
-    new { Controller = "Home", action = "Index", productPage = 1 });
-
+app.MapControllerRoute(
+    "pagination",
+    "Products/Page{productPage:int}",
+    new { Controller = "Home", Action = "Index" });
 
 app.MapDefaultControllerRoute();
 
